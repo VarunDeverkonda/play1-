@@ -72,7 +72,6 @@ def quality_scan(input_csv: Path, output_json: Path) -> None:
 
     duplicate_rows = row_count - len({tuple(row) for row in rows})
     report = {
-        "input": str(input_csv),
         "row_count": row_count,
         "column_count": len(header),
         "columns": columns,
@@ -133,8 +132,6 @@ def cleaning_summary(input_csv: Path, cleaned_csv: Path, output_json: Path) -> N
     if header_before != header_after:
         raise ValueError("Cleaned CSV changed the column order/header")
     report = {
-        "input": str(input_csv),
-        "output": str(cleaned_csv),
         "original_row_count": len(rows_before),
         "cleaned_row_count": len(rows_after),
         "duplicates_removed": len(rows_before) - len(rows_after),
