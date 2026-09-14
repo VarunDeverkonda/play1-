@@ -1,0 +1,15 @@
+{
+  "play": "data-cleaning-summary",
+  "input": {
+    "name": "input_csv",
+    "type": "file",
+    "format": "csv"
+  },
+  "outputs": [
+    "cleaned_data.csv",
+    "cleaning_summary.json",
+    "cleaning_summary.md"
+  ],
+  "mutates_input": false,
+  "deterministic": true
+}
