@@ -1,0 +1,14 @@
+{
+  "play": "data-quality-report",
+  "input": {
+    "name": "input_csv",
+    "type": "file",
+    "format": "csv"
+  },
+  "outputs": [
+    "quality_report.json",
+    "quality_report.md"
+  ],
+  "mutates_input": false,
+  "deterministic": true
+}
